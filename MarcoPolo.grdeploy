@@ -1,0 +1,11 @@
+{
+  "Configurations" : ["Release", "Debug"],
+  "iOS" : [],
+  "Android" : [{
+      "LocalName" : "Files",
+      "RemoteDir" : "assets\\internal\\MarcoPolo",
+      "Configurations" : [],
+      "IsDirectory" : true,
+      "IncludeSubDirectories" : true
+    }]
+}
