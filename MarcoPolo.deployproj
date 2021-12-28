@@ -72,6 +72,15 @@
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='OSX64'"/>
     <ItemGroup Condition="'$(Platform)'=='Android'">
+        <DeployFile Include="Navodila\Manual.pdf" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MarcoPolo\assets\internal\</RemoteDir>
+            <RemoteName>Manual.pdf</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>MarcoPolo\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
@@ -252,6 +261,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Navodila\Manual.pdf" Condition="'$(Config)'=='Release'">
+            <RemoteDir>MarcoPolo\assets\internal\</RemoteDir>
+            <RemoteName>Manual.pdf</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Android\Debug\classes.dex" Condition="'$(Config)'=='Debug'">
             <RemoteDir>MarcoPolo\classes\</RemoteDir>
             <RemoteName>classes.dex</RemoteName>
@@ -421,15 +439,6 @@
             <RemoteName>libMarcoPolo.so</RemoteName>
             <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Files\Manual.pdf" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>MarcoPolo\assets\internal\</RemoteDir>
-            <RemoteName>Manual.pdf</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -627,6 +636,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Navodila\Manual.pdf" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MarcoPolo\assets\internal\</RemoteDir>
+            <RemoteName>Manual.pdf</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Images\AppLogo_and_icon\144 144.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>MarcoPolo\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
@@ -691,6 +709,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
             <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="Navodila\Manual.pdf" Condition="'$(Config)'=='Release'">
+            <RemoteDir>MarcoPolo\</RemoteDir>
+            <RemoteName>Manual.pdf</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>MarcoPolo\res\drawable-small\</RemoteDir>
