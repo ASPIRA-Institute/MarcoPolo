@@ -711,7 +711,7 @@
             <Required>True</Required>
         </DeployFile>
         <DeployFile Include="Navodila\Manual.pdf" Condition="'$(Config)'=='Release'">
-            <RemoteDir>MarcoPolo\</RemoteDir>
+            <RemoteDir>MarcoPolo\assets\internal\</RemoteDir>
             <RemoteName>Manual.pdf</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
