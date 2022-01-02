@@ -751,7 +751,6 @@ begin
     imgBTNNavigation.Enabled := False;
 end;
 
-//////////////////TRAVEL/SECTION////////////////
 
 procedure TfrmMain.ClearFormAddTravel();
 begin
@@ -956,9 +955,6 @@ begin
   recTravelColor.Repaint;
 end;
 
-//////////////////TRAVEL/SECTION////////////////
-
-///////////////////SECTION/////////////////
 
 procedure TfrmMain.ClearFormAddSection();
 var
@@ -1216,9 +1212,6 @@ begin
   ExecuteAction(ChangeTabActionCamera);
 end;
 
-///////////////////SECTION/////////////////
-
-////////////////DOCUMENTS//////////////////
 
 procedure TfrmMain.ClearFormAddDocument();
 begin
@@ -1295,7 +1288,6 @@ begin
   // prikaži dokument v zunanjem pregledovalniku
   if file_path<>'' then      // če pot do datotek obstaja, odpri datoteko
   begin
-  { TODO 5: Preveri ali deluje tudi v iOS? }
   {$IFDEF Android}
     // ob kliku na dokument v ListView ga prikaži
     // open external viewer
@@ -1591,9 +1583,6 @@ begin
   end;
 end;
 
-////////////////DOCUMENTS//////////////////
-
-/////////////////INFO/////////////////////
 
 procedure TfrmMain.imgBTNImportDataClick(Sender: TObject);
 {$IFDEF MSWINDOWS}
@@ -1697,17 +1686,12 @@ begin
 end;
 
 
-/////////////////INFO/////////////////////
-
-/////////////////SETTINGS////////////////
-
 procedure TfrmMain.imgBTNSettingsBackClick(Sender: TObject);
 begin
   // vrni se nazaj na Potovanja / Sekcije
   ExecuteAction(ChangeTabActionTravel);
 end;
 
-/////////////////SETTINGS////////////////
 
 function TfrmMain.SelectListViewItem(list_view: TListView;
   id_item: Integer): Boolean;
@@ -1797,7 +1781,6 @@ begin
   end;
 end;
 
-/////////////////////KAMERA///////////////////////////////
 
 procedure TfrmMain.imgBTNAddDocumentBackClick(Sender: TObject);
 begin
@@ -1944,10 +1927,6 @@ begin
 end;
 
 
-/////////////////////KAMERA///////////////////////////////
-
-///////////////////MEIN MENU//////////////////////////////
-
 procedure TfrmMain.muvMainMenuStartHiding(Sender: TObject);
 begin
   cirButtonMeni.Enabled := True;
@@ -1987,7 +1966,6 @@ begin
   result := -1;
 end;
 
-/////////////////////EXPORT & IMPORT DATA//////////////////////
 procedure TfrmMain.ImportDataFromFile(id_travel: Integer; zip_file: String);
 begin
   if ImportData(id_travel, zip_file) then
@@ -1997,14 +1975,7 @@ begin
   end else
     ShowMessageDlgOK('Napaka pri uvozu podatkov.');
 end;
-/////////////////////EXPORT & IMPORT DATA//////////////////////
 
-
-
-///////////////////MEIN MENU//////////////////////////////
-
-///////////////////////LOAD & SAVE FORM STATE/////////////////
-{ TODO : POPRAVI TAKO; DA PRI MOREBITNIH NAPAKAH SE POKAŽE KAR ZAČETNA STRAN (NE SPOROČILO O ONAPAKI) }
 procedure TfrmMain.SaveFormState();
 var
   W: TBinaryWriter;
@@ -2211,21 +2182,7 @@ begin
     end;
   end;
 end;
-///////////////////////LOAD & SAVE FORM STATE/////////////////
 
-/////////////////SE TREUTNO NE UPORABLJA///////////////
-{procedure TfrmMain.ShowASyncMessage(text: String);
-var
-  ASyncService : IFMXDialogServiceASync;
-begin
-    // Prikaži asinhrono obvestilo na zaslonu
-    if TPlatformServices.Current.SupportsPlatformService (IFMXDialogServiceAsync, IInterface(ASyncService)) then
-    begin
-      ASyncService.ShowMessageAsync(text);
-    end;
-end;
-}
-/////////////////SE TREUTNO NE UPORABLJA///////////////
 /////////////////DEBUG/////////////////
 procedure TfrmMain.btnCopyDB2AndroidClick(Sender: TObject);
 var
@@ -2263,5 +2220,5 @@ begin
   end;
 
 end;
-{ TODO : Prepreči zagon dveh instanc programa, ali daj, da lahko vsaka dostopa do DB (zaklenjena) }
+
 end.
