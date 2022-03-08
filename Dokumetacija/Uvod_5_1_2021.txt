@@ -1,0 +1,52 @@
+Uvod
+Aspira je zavod strastnih in radovednih ljudi, ki razvijajo lastni jaz. Zavod deluje na lokalni in mednarodni ravni. Področja dela obsegajo računalništvo, programiranje, izobraževanje, umetnost, filmsko ustvarjanje in vizualna umetnost. Pri svojem delu zaposleni in prostovoljci zavoda Aspira veliko potujemo in pri tem uporabljajo javna prevozna sredstva. Tako smo zaznali težavo, ki jo povzroča množica dokumentov, ki jih pri svojem potovanju potrebujemo. Množici voznih kart, vstopnicam in različnimi potrdili, se je v času pandemije COVID-19 pridružila še dokazila o cepljenju, tako imenovanih Green Pass, potrdila o testiranju na COVID-19 in dPLF (Digital Passenger Locator Form) potrdil, kar je povzročilo še dodatno zmedo pri pripravi, tiskanju ter brskanju po papirjih med potovanjem. 
+Večina javnih prevoznikov sicer danes ponuja nakup in prevzem voznih kart v elektronski obliki. Pri tem ima vsak prevoznik razvito lastno aplikacijo za upravljanje voznih kart. Ker po navadi med svojim potovanjem na različnih delih potovanja uporabljamo različne prevoznike, smo tako primorani v svoje mobilne naprave nalagati množico različnih mobilnih aplikacij ter se privajati na delo s temi aplikacijami. 
+Tako se je porodila ideja o aplikaciji, ki bi omogočalo enostavno centralizirano rokovanje z vsemi temi dokumenti. Naše osnovne zahteve glede aplikacije so bile, da le ta omogoča enostavno in centralizirano vnašanje potovalnih dokumentov, ter enostavno prikazovanje dokumentov med potovanjem. Po pregledu kaj nam svetovni splet nudi na to temo, smo ugotovili, da večina aplikacij namenjenih potovanju, ponuja množico drugih možnosti, ko so načrtovanje potovanja, načrtovanje financ, itd., ki pa niso bile del naše osnovne zahteve. Prav tako obstaja množica aplikacij ki so namenjena upravljanju različnih digitalnih potrdil, tako imenovane Digital Wallet, ki pa omogočajo shranjevanje dokumentov, vendar le ti dokumenti niso vezani direktno na potovanje. Vsa ta množica možnosti dodatno zakomplicira upravljanje z aplikacijo, kar pa nismo želeli.
+Vse to nas je vodilo k odločitvi za razvoj lastne mobilen aplikacije, ki bo izpolnjevala naše osnovne zahteve po enostavnem centraliziranem upravljanju potovalnih dokumentov.
+
+
+Ideja za razvoj aplikacije se je porodila na enem od potovanj, ki je od popotnika zahtevalo kar petkratno menjavo prevoznikov in prevoznih sredstev ter hkrati tudi prehod državne meje. Ker danes že večina prevoznikov nudi nakup voznih kart preko spleta, je bila večina kupljenih voznih kart v elektronski obliki. Prav tako večina prevoznikov danes ponuja tudi lastne aplikacije za nakup ter hranjenje voznih kart, kar pri menjavi večjega števila prevoznikov povzroča dodatne težave z nameščanjem specifičnih aplikacij, ter privajanje na delo z njimi. Večina prevoznikov ponuja tudi prevzem vozne karte v pdf obliki, ki si jo lahko shranimo na mobilno napravo. Pri tem pa naletimo na drug problem in sicer na organiziranost shranjenih voznih kart. V večino primerov vozne karte v svoji mobilni napravi shranimo v določeno mapo, na Android napravah je po navadi je to kar mapa Download, v katero se privzeto shranjujejo datoteke, prenešeni iz svetovnega spleta. Pri množici dokumentov, ki se po navadi znajde v taki mapi, nastane težava pri iskanju pravega dokumenta oziroma vozne karte, kar predstavlja precej zamudno opravilo, posebej, če v obzir vzamemo, da povprečni uporabnik mobilne aplikacije pri shranjevanju dokumenta oz. vozne karte pusti privzeto ime datoteke, ki pa ni vedno takšno, da kar najbolje opiše shranjen dokument. 
+V današnjih časih, pa se zaradi pandemije COVID-19 soočamo še z vrsto drugih potrdil, ki jih moramo med svojim potovanjem imeti pri sebi. Tako je že skoraj povsod obvezna uporaba potrdila o cepljenju proti COVID-19, tako imenovan Basic Green Pass ali Super Green Pass, oziroma prebolevnostjo ali uporaba potrdila o uspešno opravljenem negativnem testu na COVID-19. 
+Tudi za ta potrdila lahko uporabljamo aplikacijo mobilno aplikacijo zVEM ali pa eno od aplikacij namenjenih shranjevanju teh potrdil. Prav tako pri prehodu v drugo državo povečini potrebujemo še dPLF (Digital Passenger Locator Form), ki ga prav tako lahko hranimo v digitalni obliki.
+V takšnih situacijah se popotnik hitro znajde v zagati, saj je vsaka menjava prevoznika oziroma prevoznega sredstva, ter tudi prehod državne meje, povzročila brskanje po mobilni napravi in papirjih za voznimi kartami in potrebnimi potrdili za potovanje.
+Tako se je porodila ideja o mobilni aplikaciji, katera bi, z kar najmanj uporabnikove iteracije, omogočala organizacijo in shranjevanje vseh teh dokumentov.
+Osnovne zahteve naročnika za razvoj aplikacij so bile:
+- enostavno centralizirano organiziranje in upravljanje s potovalnimi dokumenti, kot so, potovalne karte, potrdila, ...
+- enostaven vnos potrebnih dokumentov, s čim manj vnašanja podatkov
+- enostaven izbira in prikaz potrebnega dokumenta
+- združevanje dokumentov v sklope, ki se vežejo na posamezen segment poti
+- možnost dodajanja in brisanja poti in odsekov poti
+- možnost prikaza poti do začetka segmenta (npr. avtobusna postaja, ...), če so GPS koordinate vpisane
+Ker je zavod Aspira še le na začetku svoje poti, saj je z delovanjem pričel še le v začetku leta 2021, je bilo potrebno posebno pozornost nameniti tudi stroškom pri razvoju aplikacije. Zaradi tega smo oblikovali dodatne zahteve glede razvoja aplikacije z vidika organizacije. Te zahteve so bile:
+- pri razvoju aplikacije je potrebno nameniti posebno pozornost stroškom, ki bodo nastali pri razvoju
+- orodje za razvoj aplikacije naj bo prosto dostopno in brezplačno
+- prav tako naj bodo prosto dostopne vse komponente, knjižnice, ikone, slike, ..., ki se pri razvoju uporabljajo
+Ena od zahtev naročnika je bila tudi, da aplikacija deluje na platformi Android, saj večina njihovih zaposlenih in prostovoljcev uporablja prav to platformo, z možnostjo kasnejše nadgradnje in prilagoditve aplikacije tudi za iOS platforme.
+Glede na podane zahteve naročnika in samega zavoda, sem se odločili, da za razvoj aplikacije uporabimo razvojno orodje Delhi Embarcadero Comunity Edition, ki je brezplačno dostopno?????????? 
+(napiši tako, da je zavod Aspira naročnik aplikacije, izdelovalec pa sem jaz, ker Delphi CE lahko uporabljamo samo do prihodkov 5000$)
+
+Analiza trga, iskanje aplikacij, ki bi zadovoljile vse zahteve..........
+
+Iz oblikovanih zahtev naročnika sem s pomočjo orodja Balsamic, ki ga je podjetje ? dalo zavodu Aspira v prosto uporabo, ustvaril skelet (wireframe) aplikacije, ki sem ga pokazal naročniku. Aplikacija je zasnovana tako, da uporabniku omogoča vnos potovanja, oziroma več potovanj, znotraj samega potovanja pa lahko uporabnik poljubno dodaja posamezne odseke poti. Vsak odsek poti lahko vsebuje enega ali več dokumentov, ki jih uporabnik prikaže izbranemu ponudniku prevoza ob pričetku odseka poti. Za manjšimi popravki in spremembami skeleta smo prišli, do verzije slika 1., ki pa se je med samim razvojem aplikacije, zaradi tehnoloških in drugih ovir ter dodatnih zahtev, še rahlo spremenila.
+
+Izbira orodji in tehnologije:
+Po potrditvi skeleta aplikacije (wireframe) s strani naročnika, sem se glede na podane zahteve naročnika in lastne izkušnje, z delom v tem orodju, odločil za uporabo programskega orodja Delphi CE. Delphi je .........
+FMX je ..........
+
+Glede na izkušnje, ki jih imajo zaposleni in prostovoljci zavoda Aspira, pri svojem potovanju, sem lahko sklepal, da bo količina podatkov za posamezno potovanje, razmeroma majhna. Pričakovano je, da popotnik na svojem potovanju, povprečno zamenja prevoznika 5 krat in da pri tem za vsak odsek poti, ki ga opravi z drugim prevoznikom, potrebuje v povprečju 2 dokumenta. V sled teh spoznanj, lahko pričakujemo, da bo količina podatkov, ki se bodo shranjevali v podatkovno bazo, razmeroma majhna. S tega naslova, sem se pri izbiri podatkovne baze odločili za podatkovno bazo SQLite, podjetja ...., ki je prosto dostopna in katere uporaba je strani Delphija dobro podprta in dokumentirana. Podatkovna baza SQLite omogoča zgolj najbolj osnovne funkcionalnosti podatkovnih baz in ne omogoča naprednih lastnosti podatkovnih baz, kot je ???. Prav tako podatkovna baza (v času razvoja še ni) ne podpira kriptiranja podatkov, kar prav tako ni predstavljalo težave pri našem projektu. Podatkovna baza se bo nahajala lokalno, na napravi sami, tako da tudi tu ni bilo potrebno razmišljati o oddaljenem dostopu do podatkovne baze. Zaradi izbire SQLite podatkovne baze in njene skromnosti, sem se tudi odločil da dokumente ne shranjujem v podatkovno bazo, ampak le te kopiram v namensko mapo na sami napravi. Kopiranje se izvaja tako, da originalni dokument ostaja zapisan na istem mestu, njegova kopija, pa se z novim unikatnim imenom prekopira v za to namenjeno mapo v napravi. S tem sem zmanjšal velikost podatkovne baze in hkrati pohitril in poenostavil razvoj aplikacije.
+
+Aplikacija je sestavljena iz šestih oken, ki so namenjena posameznim opravilom. Ta okna smo v aplikaciji implementirali s pomočjo TTab?? komponente, ki vsebuje 6 zavihkov. Vsak zavihek v programu tako predstavlja posamezno formo. Navigacijski gumbi za prehajanje med posameznimi zavihki so skriti, kar onemogoča prosto sprehajanje uporabnika po aplikaciji. V ta namen sem izdelal posamezne gumbi, ki nas s klikom vodijo do naslednjega zaslona.
+Osnovni ali začetni zaslon aplikacije predstavlja okno, na katerem so prikazana vsa vnesena potovanja in njihovi odseki. V tem oknu aplikacija je omogočeno dodajanje, spreminjanje in brisanje potovanja in odsekov poti. Za prikaz potovanj in posameznih odsekov na potovanju sem uporabil komponento TListView. TListView je komponenta, ki programerju omogoča veliko svobode pri njeni grafični predstavitvi.
+
+
+S kaliko na ikono za prikaz podrobnosti odseka poti, se se premaknemo v formo za dodajanje, urejanje in brisanje dokumentov.
+
+
+.........................................................
+- uporaba sqlite podatkovne baze
+- dokumenti se ne shranjujejo v bazo (zaradi velikosti baze), ampak se kopirajo v posebno mapo
+
+
+
+
+

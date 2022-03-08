@@ -1164,20 +1164,27 @@ begin
   end;;
 end;
 
-function TfrmMain.CheckSectionDateTime(date: TDate; time: TTime; duration: Integer; id_section: Integer): Boolean;
+function TfrmMain.CheckSectionDateTime(date: TDate; time: TTime;
+                                      duration: Integer;
+                                      id_section: Integer): Boolean;
 var
   datetime: TDateTime;
   start_datetime, end_datetim: String;
 begin
-  // Preveri ali se datum in čas, ter predviden čas potovanja prekriva z že obstoječim
+  // Preveri ali se datum in čas,
+  // ter predviden čas potovanja prekriva z že obstoječim
   cobTransportType.SetFocus;
   datetime := date + time;
   start_datetime := FormatDateTime('yyyy-mm-dd hh:mm:ss', datetime);
-  if (CompareDateTime(datetime, Now) >= 0) then   // Preveri ali je datum in čas začetka poti večji od trenutnega datuma in ure
+  // Preveri ali je datum in čas začetka poti večji od trenutnega datuma in ure
+  if (CompareDateTime(datetime, Now) >= 0) then
   begin
-    // Preveri ali začetni in končni (date, time + duration) datum in čas potovanja sovpada še s katerim od datumov
-    end_datetim := FormatDateTime('yyyy-mm-dd hh:mm:ss', IncMinute(datetime, Trunc(edtEstimatedTravelTime.Value)));
-    if ((DataModule1.IsDateTimeBetween(start_datetime, id_section)=0) AND (DataModule1.IsDateTimeBetween(end_datetim, id_section)=0))  then
+    // Preveri ali začetni in končni datum in čas potovanja
+    // sovpada še s katerim od datumov
+    end_datetim := FormatDateTime('yyyy-mm-dd hh:mm:ss',IncMinute(datetime,
+                                  Trunc(edtEstimatedTravelTime.Value)));
+    if ((DataModule1.IsDateTimeBetween(start_datetime, id_section)=0) AND
+        (DataModule1.IsDateTimeBetween(end_datetim, id_section)=0))  then
       result := True
     else
       result := False;

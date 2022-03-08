@@ -465,11 +465,13 @@ function TDataModule1.IsDateTimeBetween(datetime: String; id_section: Integer): 
 var
   sql: String;
 begin
-  // vrne št. zadetkov, če se datum in čas (duration)
+  // vrne št. zadetkov, z ujemajočim datum in časom (duration)
   try
     sql := 'SELECT *, DATETIME(DATE(date) || " " || TIME(time)) AS startdatetime, ' +
-    'DATETIME(DATE(date) || " " || TIME(DATETIME(time,  "+" || duration || " minutes"))) AS enddatetime ' +
-    'FROM Sections WHERE "' + datetime + '" BETWEEN startdatetime AND enddatetime AND id_section<>' + IntToStr(id_section);
+          'DATETIME(DATE(date) || " " || TIME(DATETIME(time,  "+" || ' +
+          'duration || " minutes"))) AS enddatetime ' +
+          'FROM Sections WHERE "' + datetime + '" BETWEEN startdatetime AND ' +
+          'enddatetime AND id_section<>' + IntToStr(id_section);
     FDQTemp.SQL.Clear;
     FDQTemp.SQL.Add(sql);
     FDQTemp.Open();

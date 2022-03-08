@@ -1,0 +1,6 @@
+Povzetek:
+V okviru diplomskega dela sem izdelal aplikacijo Marco Polo, organizator potovalnih dokumentov. Ta omogoča enostavno centralizirano vnašanje in upravljanje z vsemi vrstami potovalnih dokumentov. Za načrtovanje aplikacije sem uporabil orodja kot so orodje Balsamic za načrtovanje prikaza funkcionalnosti (wireframe) ter Universal Database Tool, Edition Community, za načrtovanje podakovne baze. Pri implementaciji pa sem uporabil programski jezik Delphi, razvojno orodje Embarcadero® Delphi Community Edition, ter knjižnice Kastri, ModernListView in HtmlLabel. Zbirko podatkov smo implementirali na podatkovni bazi SQLite.
+V diplomski nalogi prikažem proces razvoja aplikacije, ter prikažem razliko med načrtovano in realizirno izvedbo aplikacije ter kompromise, ki sem jih med procesom razvoja aplikacije moral sprejeti, tako zaradi tehnoloških kot tudi stroškovnih zahtev.
+
+
+

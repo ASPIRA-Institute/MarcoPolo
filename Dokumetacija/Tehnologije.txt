@@ -1,0 +1,129 @@
+UPORABLJENE TEHNOLOGIJE
+
+Delphi
+
+Slika ?: Logotip razvojnega orodja Embarcadero Delphi Comunity Edition
+
+viri:
+1	https://en.wikipedia.org/wiki/Delphi_(software)
+2	https://www.embarcadero.com/products/delphi/starter
+
+Zaradi izkušenj pri razvoju programskih produktov v razvojnem orodju Delphi ter poznavanje programskega jezija Object Pascal, smo se odločili da razuvoj programa Marco Polo, Organizator potovalnih dokumentov, implementiramo v programskem produketu Delphi Community Edition.
+Delphi Community Edition [1][2] je programski produkt, ki zagotavlja integrirano razvojno orodje (IDE) za izdelavo aplikacij za iOS, Android, Windows in macOS platforme. Uporablja Delphi dialekt programskega jezika Object Pascal. 
+Delphi je prvotno razvilo podjetje Borland kot orodje za hiter razvoj aplikacij za Windows, kot naslednika programa Turbo Pascal, danes pa za njegov razvoj skrbi podjetje Embarcadero Technologies. 
+Delphi vključuje urejevalnik kode, orodje za vizualno oblikovanje aplikacij, integriran razhroščevalnik, komponento za nadzor izvorne kode in podporo za vtičnike tretjih oseb. Vizualni oblikovalec aplikacij ima možnost uporabe knjižnice Visual Component Library (VCL) za razvoj in oblikovanje v okolju Windows ali ogrodja FireMonkey (FMX) za med-platformske aplikacije. 
+
+ 
+FireMonkey (FMX)
+
+Slika ?: Logotip med-platformnega ogrodja grafičnega uporabniškega vmesnika (GUI)
+
+viri: 
+1	https://gs.statcounter.com/os-market-share/mobile/worldwide
+2	https://en.wikipedia.org/wiki/FireMonkey
+
+Ker je bilo načrtovano, da se Organizator potovalnih dokumentov, izvaja na mobilnih napravah, prvenstveno na Adnroid platfomi, ki je med mobilnimi platformami [1] trenutno najbolj razširjena, po statistiki spletne strani https://gs.statcounter.com/, zavzema kar 70,05% [10.1.2021] tržnega deleža, smo za njen razvoj uporabili ogrodje grafičnega vmesnika FireMonkey. Uporaba ogrodja grafičnega vmesnika FireMonkey, nam omogoča, da lahko v bodoče aplikacijo prenesemo še na ostale podprte platforme.
+FireMonkey (FMX) [2] je ogrodje grafičnega vmesnika namenjenega razvoju med-platformnim aplikacija za Window, macOS, iOS in Android platforme. Z vključitvijo knjižnice FMX Linux, pa je omogočen razvoj aplikacij tudi na Liunux platformah.
+FireMonkey se je začel kot vektorsko ogrodje uporabniškega vmesnika (UI), vendar se v kasnejši fazi svojega razvoja razvil v bitno ali rastrsko ogrodje uporabniškega vmesnika (UI), z namenom, da bi omogočil večji nadzor nad videzom grafičnega vmesnika, ki bi bolj ustrezal videzom na ciljnih platformah. FireMonkey za izrisovanje objektov uporablja strojno pospeševanje če je v operacijskih sistemih na voljo. Tako za izrisovanje objektov v operacijskih sistemih Windows uporablja knjižnico Direct2D, na starejših operacijskih sistemih, kjer knjižnica Direct2D ni na voljo, na primer Windows XP, pa se uporablja knjižnica GDI+. V operacijskih sistemih iOS in Android, Firemonkey uporablja knjižnico OpenGL ES. Za izrisovanje objektov v operacijskem sistemu MacOS, pa se uporablja knjižnica OpenGL.
+
+SQLite
+
+Slika ? Logotip podatkovne zbirke SQLite
+viri:
+1	https://en.wikipedia.org/wiki/SQLite
+2	https://www.tremplin-numerique.org/sl/Kaj-je-sqlite-in-zakaj-je-tako-priljubljen
+
+Glede na predvideno število podatkov, ki jih bo morala aplikacija hraniti, ter zaradi enostavnosti ter brezplačne uporabe, smo se odločili, da za izvedbo hranjenja podatkov uporabimo podatkovno bazo SQLite.
+SQLite je relacijska podatkovna baza, združljiva z SQL in sledi sintaksi PostgreSQL. Za razliko od sistemov, kot sta MySQL in PostgreSQL, SQLite ne uporablja arhitekture odjemalec-strežnik, temveč se integrira v samo aplikacijo in tako postane sestavni del programa. SQLite tako nima samostojnih procesov, ki zahtevajo veliko sistemskih virov in s karimi bi komunicirala aplikacija. SQLite shranjuje svoje podatke v datoteko, ki je za vse platfomre enaka.
+SQLite podpira večino funkcij standardnega jezika SQL92 z nekaj razlikami in pomankljivostmi, kot je naprimer manjše stevilo podprtih podatkovnih tipov, ni podpore več uporabnikom, ni podprto sočano pisanje, kriptiranje podatkovne baze prav tako ni podprto.
+
+
+Knjižnica Kastri
+Slika ? Logotip knjižbice Kastri
+vri:
+
+
+
+Knjižnica ModernListView
+Slika 
+vri:
+
+
+Knjižnica HtmlLabel
+Slika 
+vri:
+
+
+
+==========================================================================================================
+SQLite
+
+Celoten program je v knjižnici C, ki je integrirana v aplikacije. Baza podatkov postane sestavni del programa in odpravlja samostojne procese, ki zahtevajo veliko virov.
+
+
+SQLite je sistem za upravljanje relacijskih podatkovnih baz (RDBMS). Za razliko od običajnih sistemov za upravljanje relacijskih podatkovnih baz, ne bazira na sistemu odjemalec - strežnik, temveč je vgrajena v programsko opremo.
+SQLite na splošno sledi sintaksi PostgreSQL.
+
+
+V nasprotju s sistemi za upravljanje podatkovnih zbirk odjemalec-strežnik mehanizem SQLite nima samostojnih procesov, s katerimi bi komuniciral aplikacijski program. Namesto tega je knjižnica SQLite povezana in tako postane sestavni del aplikacijskega programa. Povezovanje je lahko statično ali dinamično. Aplikativni program uporablja funkcionalnost knjižnice SQLite s preprostimi funkcijskimi klici, ki zmanjšujejo zakasnitve pri dostopu do podatkovne zbirke:
+
+SQLite
+
+vir:
+1	https://en.wikipedia.org/wiki/SQLite
+
+
+SQLite (/ˌɛsˌkjuːˌɛlˈaɪt/,[4][5] /ˈsiːkwəˌlaɪt/[6]) je sistem za upravljanje relacijskih podatkovnih zbirk (RDBMS), ki ga vsebuje knjižnica v jeziku C. V nasprotju s številnimi drugimi sistemi za upravljanje podatkovnih zbirk SQLite ni odjemalec-strežnik podatkovne zbirke. Namesto tega je vgrajen v končni program.
+
+SQLite na splošno sledi sintaksi PostgreSQL. SQLite uporablja dinamično in šibko tipizirano sintakso SQL, ki ne zagotavlja celovitosti domene. 7 To pomeni, da lahko na primer vstavimo niz v stolpec, ki je definiran kot celo število. SQLite bo po potrebi poskušal pretvoriti podatke med oblikami, v tem primeru niz "123" v celo število, vendar ne zagotavlja takšnih pretvorb in bo podatke shranil kot take, če takšna pretvorba ni mogoča.
+
+SQLite je priljubljena izbira kot vgrajena programska oprema podatkovne zbirke za lokalno/odjemalčevo shranjevanje v aplikacijski programski opremi, kot so spletni brskalniki. Je verjetno najbolj razširjen pogon podatkovne zbirke, saj ga danes med drugim uporabljajo številni razširjeni brskalniki, operacijski sistemi in vgrajeni sistemi (kot so mobilni telefoni).[8] SQLite je vezan na številne programske jezike.
+
+V nasprotju s sistemi za upravljanje podatkovnih zbirk odjemalec-strežnik mehanizem SQLite nima samostojnih procesov, s katerimi bi komuniciral aplikacijski program. Namesto tega je knjižnica SQLite povezana in tako postane sestavni del aplikacijskega programa. Povezovanje je lahko statično ali dinamično. Aplikativni program uporablja funkcionalnost knjižnice SQLite s preprostimi funkcijskimi klici, ki zmanjšujejo zakasnitve pri dostopu do podatkovne zbirke:
+===============================================================================================
+FMX
+vir:
+https://en.wikipedia.org/wiki/FireMonkey
+
+FireMonkey (skrajšano FMX) je medplatformno ogrodje grafičnega vmesnika, ki ga je razvilo podjetje Embarcadero Technologies za uporabo v programih Delphi ali C++Builder z uporabo C++ ali Object Pascal za izdelavo medplatformnih aplikacij za sisteme Windows, macOS, iOS in Android. Knjižnica tretje osebe, FMX Linux, omogoča gradnjo aplikacij FireMonkey v operacijskem sistemu Linux.
+
+FireMonkey temelji na programu VGScene, ki ga je zasnoval Eugene Kryukov iz podjetja KSDev iz Ulan-Udeja v Rusiji[1] kot novo generacijo vektorskega grafičnega vmesnika. Leta 2011 je bil VGScene prodan ameriškemu podjetju Embarcadero Technologies. Kryukov je še naprej sodeloval pri razvoju programa FireMonkey. Poleg tradicionalne knjižnice Visual Component Library (VCL), ki je namenjena samo sistemu Windows, je medplatformno ogrodje FireMonkey od različice XE2 vključeno kot del programov Delphi, C++Builder in RAD Studio. FireMonkey se je začel kot vektorsko ogrodje uporabniškega vmesnika, vendar se je razvil v bitno ali rastrsko ogrodje[2] uporabniškega vmesnika, da bi omogočil večji nadzor nad videzom, ki bi ustrezal videzom ciljnih platform.
+
+
+Program FireMonkey uporablja strojno pospeševanje, če je na voljo v operacijskih sistemih Windows, macOS, iOS in Android. Direct2D ali OpenGL se lahko uporablja v operacijskih sistemih Windows Vista, Windows 7, Windows 8 in Windows 10. Na platformah Windows, kjer Direct2D ni na voljo (na primer Windows XP), se uporabi GDI+. OpenGL se uporablja v operacijskem sistemu MacOS. OpenGL ES se uporablja v operacijskih sistemih iOS in Android.
+
+===============================================================================================
+Delphi
+
+vir:
+https://en.wikipedia.org/wiki/Delphi_(software)
+
+Delphi je programski izdelek, ki uporablja dialekt programskega jezika Delphi v jeziku Object Pascal in zagotavlja integrirano razvojno okolje (IDE) za hiter razvoj aplikacij za namizno, mobilno, spletno in konzolno programsko opremo,[3] trenutno ga razvija in vzdržuje podjetje Embarcadero Technologies.
+Prevajalniki programa Delphi ustvarjajo izvirno kodo za Microsoft Windows, macOS, iOS, Android in Linux (x64)[4][5][6].
+Delphi vključuje urejevalnik kode, vizualni oblikovalec, integriran razhroščevalnik, komponento za nadzor izvorne kode in podporo za vtičnike tretjih oseb. Urejevalnik kode vsebuje funkcije Code Insight (dopolnjevanje kode), Error Insight (preverjanje napak v realnem času) in refaktoriranje. Vizualni oblikovalec obrazcev ima možnost uporabe knjižnice Visual Component Library (VCL) za razvoj izključno za Windows ali ogrodja FireMonkey (FMX) za medplatformni razvoj. Ključna lastnost je podpora podatkovnim bazam, ki jo zagotavlja FireDAC (Database Access Components). Delphi je znan po hitrem sestavljanju, izvorni kodi in produktivnosti razvijalcev [potrebna navedba].
+
+Delphi je prvotno razvil Borland kot orodje za hiter razvoj aplikacij za Windows kot naslednik programa Turbo Pascal. Delphi je obstoječemu jeziku dodal popolno objektno usmerjeno programiranje, jezik pa se je razširil s podporo generičnim metodam, anonimnim metodam, zaprtjem in nativno podporo za objektni model komponent (Component Object Model - COM).
+
+Delphi in njegov ustreznik C++, C++Builder, sta interoperabilna in se skupaj prodajata pod imenom RAD Studio. Obstajajo izdaje Professional, Enterprise in Architect, pri čemer imajo višje izdaje več funkcij po višji ceni. Obstaja tudi brezplačna izdaja Community, ki ima večino funkcij iz izdaje Professional, vendar je omejena na uporabnike in podjetja z nizkimi prihodki[7].
+
+vir:
+http://docs.embarcadero.com/products/rad_studio/delphi7/D7_DevelopersGuide.pdf
+
+Borland Delphi je objektno usmerjeno, vizualno programsko okolje za razvoj 32-bitnih aplikacij za uporabo v operacijskih sistemih Windows in Linux. Z Delphijem lahko ustvarite zelo učinkovite aplikacije z minimalno količino ročnega kodiranja. Delphi ponuja nabor orodij za hitro oblikovanje aplikacij (RAD), vključno s programskimi čarovniki ter predlogami aplikacij in obrazcev, ter podpira objektno usmerjeno programiranje z obsežno knjižnico razredov, ki vključuje: 
+- Knjižnico vizualnih komponent (VCL), ki vključuje predmete, ki zapirajo API sistema Windows ter druge uporabne tehnike programiranja (Windows).
+- Borland Component Library for Cross-Platform (CLX), ki vključuje predmete, ki vsebujejo knjižnico Qt (Windows ali Linux).
+V tem poglavju je na kratko opisano razvojno okolje Delphi in kako se prilega v življenjski cikel razvoja. V preostalem delu tega priročnika so na voljo tehnične podrobnosti o razvoju splošnih aplikacij, aplikacij za podatkovne zbirke, internet in intranet
+
+
+vir:
+https://www.embarcadero.com/products/delphi/starter/free-download
+
+Embarcadero® Delphi Community Edition je odličen način za začetek gradnje vizualno osupljivih visoko zmogljivih izvirnih aplikacij Delphi za Windows, macOS, iOS in Android. Delphi Community Edition vključuje poenostavljen IDE, urejevalnik kode, integriran razhroščevalnik, nagrajene vizualne oblikovalce za hitrejši razvoj, zmogljive komponente za dostop do podatkov in tehnologije za vezavo podatkov, na stotine vizualnih komponent ter omejeno licenco za komercialno uporabo.
+
+
+vir:
+https://www.embarcadero.com/products/delphi/starter
+
+Delphi Community Edition je celovit IDE za izdelavo aplikacij za iOS, Android, Windows in macOS iz ene same baze programske opreme Delphi (licenca za omejeno komercialno uporabo).
+Delphi CE brezplačno delimo z našo skupnostjo samostojnih razvijalcev, zagonskih podjetij, študentov in neprofitnih organizacij.
+Delphi CE vključuje urejevalnik kode, zmogljiva orodja za razhroščevanje, vgrajen dostop do priljubljenih lokalnih podatkovnih zbirk s podatki v živo v času načrtovanja, zmogljivosti Bluetooth in vizualni oblikovalec uporabniškega vmesnika s podporo za sloge, ki so popolni kot piksel in prilagojeni posamezni platformi.

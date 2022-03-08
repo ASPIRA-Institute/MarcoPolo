@@ -1,0 +1,28 @@
+25 strani A4
+1 oseba mn. (smo se, smo ...)
+- 2 x v pregled mentorju
+- oblikovni pregled (v referatu)
+- lektorski pregled (študent, slavist)
+Potrdilo o lektoriranju
+
+-------------------------------------------------------------------------------------------
+- namen
+- funkcionalnost
+- predstavitev tehnologije (1 odstavek Delphi, 1 odstavek SQLite, 1 odstavek FMX)
+- potek razvoja (izseki kode)
+- predstavitev izdelane aplikacije (navodila, način uporabe)
+
+KLjučne besede: mobilna aplikacija, potovanje, Marco Polo, Embarcadero Delphi CE, SQLite
+
+Povzetek: opis funkcionalnosti (kakšen je cilj diplomske, funkcionalnost (v 2 stavkih), analiza izdelane aplikacije)
+
+2. 
+- Namen aplikacije
+- Zahtevane funkcionalnosti (funkcionalna dekompozicija) - http://colos.fri.uni-lj.si/eri/RACUNALNISTVO/INFORMATIKA/postopek_izdelave.html
+- tehnologija
+- razvoj (ali UML)
+- predstavitev
+3.
+Razvoj
+6.
+Viri
